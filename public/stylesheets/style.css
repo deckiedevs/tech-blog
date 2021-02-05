@@ -151,7 +151,6 @@ main {
 	color: var(--primary);
 	background-color: var(--dark);
 	padding: 10px 15px;
-	border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -180,6 +179,20 @@ main {
 	font-weight: bold;
 }
 
+/* COMMENTS */
+.comment-form-body {
+    padding: 20px;
+}
+
+.comment {
+    margin: 20px 15px;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 14px;
+}
+
   /* FORM */
 .form-label,
 .form-input {
@@ -191,11 +204,17 @@ main {
 	margin: 0 0 0 5px;
 }
 
-.form-input {
+.form-input,
+.form-textarea {
 	width: 100%;
 	padding: 7px;
 	margin: 5px 0 15px 0;
-	font-size: 16px;
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
 	border: 2px solid var(--light-dark);
 	border-radius: var(--border-radius);
+}
+
+.form-textarea {
+	margin: 0;
 }
