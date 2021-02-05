@@ -20,6 +20,10 @@ body {
     line-height: 1.5;
     font-size: 16px;
 }
+
+p {
+    font-size: 1.2rem;
+}
   
 h1 {
     font-weight: 700;
@@ -53,23 +57,13 @@ main {
     width: 94%;
 }
   
-p {
-    font-size: 1.2rem;
-}
-
-a, a:visited {
-	color: var(--dark);
-	text-decoration: none;
-	font-weight: bold;
-}
-  
 .btn {
-    font-size: 1.3rem;
+    font-size: 16px;
     text-decoration:none;
-    padding: 6px 5px;
+    padding: 10px 5px;
     width: 100%;
     display: block;
-    margin: 5px 0;
+    margin: 15px 0;
     border-radius: var(--border-radius);
     color: var(--primary);
     border: none;
@@ -112,7 +106,24 @@ a, a:visited {
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
 }
-  
+
+.btn-no-style,
+.btn-no-style:active {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+}
+
+
+.btn-no-style:focus {
+    outline: none;
+}
+
 .hero {
     padding: 3% 4%;
     background-color: var(--dark);
@@ -162,23 +173,29 @@ a, a:visited {
 	margin-bottom: 20px;
 }
   
+.card-body a,
+.card-body a:visited {
+	color: var(--dark);
+	text-decoration: none;
+	font-weight: bold;
+}
+
   /* FORM */
 .form-label,
-.form-input,
-.form-textarea {
+.form-input {
 	display: block;
 }
 
 .form-label {
-	font-size: 1.1rem;
+	font-size: 16px;
 	margin: 0 0 0 5px;
 }
 
 .form-input {
 	width: 100%;
-	padding: 3%;
-	margin: 5px 0;
-	font-size: 1.2rem;
+	padding: 7px;
+	margin: 5px 0 15px 0;
+	font-size: 16px;
 	border: 2px solid var(--light-dark);
 	border-radius: var(--border-radius);
 }
