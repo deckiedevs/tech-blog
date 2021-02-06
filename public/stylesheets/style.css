@@ -27,7 +27,6 @@ a:focus,
 a:visited {
 	color: var(--dark);
 	text-decoration: none;
-	/* font-weight: bold; */
 }
 
 p {
@@ -98,9 +97,18 @@ main {
     font-size: 16px;
 }
 
-
 .btn-no-style:focus {
     outline: none;
+}
+
+#add-post-btn {
+    background-color: var(--dark);
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: var(--border-radius);
 }
 
 .hero {
@@ -189,4 +197,35 @@ main {
 
 .form-textarea {
 	margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.post-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.post-list-item {
+    margin: 15px;
+    padding: 10px 15px;
+    background-color: var(--light-dark);
+    list-style: none;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-list a {
+    color: var(--primary);
 }
