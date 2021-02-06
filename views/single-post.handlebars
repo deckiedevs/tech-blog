@@ -1,18 +1,4 @@
-<article class="post card">
-    <div class="card-header">
-        <div class="title">
-            {{post.title}}
-        </div>
-        <div class="meta">
-            Posted by {{post.user.username}} on {{post.created_at}}
-        </div>
-    </div>
-    <div class="card-body">  
-        <div class="content">
-            {{post.content}}
-        </div>
-    </div>
-</article>
+{{> post-info post }}
 
 {{#if loggedIn}}
 <form class="comment-form card">
@@ -29,22 +15,7 @@
 </form>
 {{/if}}
 
-<section class="comments card">
-    <div class="card-header">Comments</div>
-    {{#if post.comments}}
-    {{#each post.comments}}
-        <div class="comment">
-            <p>{{comment_text}}</p>
-            <p>&mdash; {{user.username}} on {{created_at}}</p>
-        </div>
-    {{/each}}
-    {{else}}
-        <div class="comment">
-            <p>There are no comments!</p>
-        </div>
-    {{/if}}
-    </div>
-</section>
+{{> comments post.comments}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

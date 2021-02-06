@@ -28,7 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // sets handlebars as template engine
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
