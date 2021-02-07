@@ -2,9 +2,6 @@ const express = require('express');
 const app = express();
 const sequelize = require('./config/connection');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 // creates session
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -25,6 +22,9 @@ const sess = {
 };
 
 app.use(session(sess));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // uses public folder
 const path = require('path');
