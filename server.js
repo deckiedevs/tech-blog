@@ -11,12 +11,16 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 
 const sess = {
-    secret: process.env.DB_SECRET,
+    secret: process.env.SECRET,
     cookie: {}, 
     resave: false,
     saveUnitialized: true,
     store: new SequelizeStore({
-        db: sequelize
+        db: sequelize,
+        // checks for session expiration every 15 minutes
+        checkExpirationInterval: 15 * 60 * 1000,
+        // session expires in 24 hours
+        expiration: 24 * 60 * 60 * 1000 
     })
 };
 
